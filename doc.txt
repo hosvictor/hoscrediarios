@@ -1,0 +1,14 @@
+ESTRUTURA DE PASTAS
+
+api/: Contém as classes que fazem as requisições à API. Essas classes serão usadas pelos repositórios para obter os dados.
+blocs/: Contém a lógica de negócios da aplicação usando o padrão BLoC. Aqui estão os arquivos que definem os eventos, estados e a lógica principal do BLoC.
+models/: Contém os modelos de dados que representam os objetos retornados pela API.
+repositories/: Repositórios fazem a ponte entre a API e o BLoC. Eles chamam a API e retornam os dados processados.
+views/: Contém tudo relacionado à interface do usuário. As telas, widgets e componentes comuns são organizados aqui.
+    screens/: Telas da aplicação que representam diferentes páginas ou seções.
+    widgets/: Widgets reutilizáveis que compõem as telas.
+    common/: Componentes de UI comuns e temas compartilhados.
+utils/: Contém funções auxiliares, constantes e validadores usados em diferentes partes do aplicativo.
+
+main.dart: Ponto de entrada do aplicativo Flutter, onde a aplicação é iniciada.
+routes.dart: Define as rotas e a navegação entre as telas da aplicação.
