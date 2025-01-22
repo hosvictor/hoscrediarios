@@ -4,8 +4,8 @@ import 'package:http/http.dart' as http;
 
 Future<UserDetailsModel> fetchUserDetailsData() async {
 
-  const String baseUrl = 'http://10.0.2.2:3000';
-
+  // android studio usar http://10.0.2.2:4000 como local
+  const String baseUrl = 'http://192.168.0.55:3000';
   final response = await http.get(Uri.parse('$baseUrl/user'));
 
   if (response.statusCode == 200) {

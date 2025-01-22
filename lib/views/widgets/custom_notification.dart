@@ -20,8 +20,6 @@ class CustomNotificationWidget extends StatelessWidget {
     );
   }
 
-  
-
   @override
   Widget build(BuildContext context) {
     return true ? GestureDetector(

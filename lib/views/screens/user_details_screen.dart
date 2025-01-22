@@ -1,23 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hoscrediarios/api/user_details.dart';
-// import 'package:hoscrediarios/api/user_details.dart'; // Comentado para uso futuro
 import 'package:hoscrediarios/models/user_details.dart';
 import 'package:hoscrediarios/views/widgets/custom_header.dart';
 
-// Dados mockados
-final DUMMY_USER_DETAILS = UserDetailsModel(
-  fullName: 'João da Silva',
-  birthDate: '01/01/1990',
-  gender: 'Masculino',
-  field1: 'Informação adicional 1',
-  field2: 'Informação adicional 2',
-  contactPhone: '(11) 99999-9999',
-  whatsappPhone: '(11) 98888-8888',
-  cep: '01234-567',
-  number: '123',
-  complement: 'Apto 101',
-  attachments: ['Documento1.pdf', 'FotoPerfil.jpg'],
-);
 
 class UserDetailsScreen extends StatelessWidget {
   @override
@@ -135,7 +120,7 @@ class UserDetailsScreen extends StatelessWidget {
                             SizedBox(width: 16),
                             Expanded(
                               flex: 2,
-                              child: buildReadOnlyField("Número", user.number),
+                              child: buildReadOnlyField("Nº", user.number),
                             ),
                             SizedBox(width: 16),
                             Expanded(
@@ -164,12 +149,6 @@ class UserDetailsScreen extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  // Função que retorna dados mockados como Future
-  Future<UserDetailsModel> _fetchMockedUserData() async {
-    await Future.delayed(Duration(seconds: 1)); // Simula atraso de rede
-    return DUMMY_USER_DETAILS;
   }
 
   // Método para criar campos somente leitura
